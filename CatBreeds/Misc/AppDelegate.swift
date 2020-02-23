@@ -14,6 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     Colors.changeDefaults()
+    
+    window = UIWindow(frame: UIScreen.main.bounds)
+    let mainTabBarVC = MainTabBarVC()
+    window?.rootViewController = mainTabBarVC // same as IB Is Initial View Controller
+    window?.makeKeyAndVisible()
+    
     return true
   }
 
